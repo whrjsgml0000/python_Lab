@@ -1,4 +1,10 @@
 try:
-    print(4 / 0)
-except ZeroDivisionError:
-    print("0으로 나눌 수 없습니다.")
+    f = open("none","r")
+except FileNotFoundError as e:
+    print(e)
+else:
+    data = f.read()
+    print(data)
+    f.close()
+finally:
+    print("프로그램을 종료합니다.")
